@@ -15,7 +15,7 @@ jobs:
             DEBUG_MODE: false
         steps:
             - name: Echo message
-              run: echo 'Workflow triggered by filters or activity types with var ${{ var.MY_VAR }}.'
+              run: echo 'Workflow triggered by filters or activity types with var ${{vars.MY_VAR}}.'
 
 
 
