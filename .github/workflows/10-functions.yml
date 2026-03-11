@@ -6,6 +6,9 @@ jobs:
     demo:
        runs-on: ubuntu-latest
        steps:
+         - name: Bug step
+           if: ${{contains(github.event.pull_request.title,'fix')}}
+           run: echo "Bug fix detected"
          - name: Failing step
            run: exit 1
          - name: Run on success
@@ -17,6 +20,4 @@ jobs:
          - name: Always step
            if: always()
            run: echo "Always step" 
-         - name: Bug step
-           if: ${{contains(github.event.pull_request.title,'fix')}}
-           run: echo "Bug fix detected"    
+    
