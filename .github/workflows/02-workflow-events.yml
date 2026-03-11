@@ -1,5 +1,9 @@
 name: 02 - Eventos
-on: push
+on: 
+    - push
+    - Pull_request
+    - schedule:
+        - cron: '15 4,5 * * *' 
 jobs:
     echo: 
         runs-on: ubuntu-latest
