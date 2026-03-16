@@ -12,5 +12,6 @@ jobs:
     echo:
         runs-on: ubuntu-latest
         steps:
-            - run: |
-                | echo "Workflow triggered by filters or activity types"
+            - name: echo
+              run: |
+                echo "Workflow triggered by filters or activity types"
